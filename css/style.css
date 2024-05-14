@@ -10,8 +10,8 @@
 /*      GENERAL STYLES         */
 /*******************************/
 :root {
-  --primary: #135877;
-  --secondary: #FFC000;
+  --primary: #114063;
+  --secondary: #FFC40F;
   --background-color: rgb(219 229 236);
   --highlight-color: #fff2cc;
   --white: #ffffff;
@@ -25,11 +25,13 @@
 }
 
 html {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", "Roboto", sans-serif;
   scroll-behavior: smooth;
   /* scroll-padding-top: 8rem; */
 }
-
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Helvetica";
+}
 body {
   margin: 0;
   padding: 0;
@@ -403,10 +405,11 @@ video {
 .about-us-grid-box .icon{
   background-color: #fdfdfd;
   border-radius: 20px;
-  padding: 1.6rem;
+  padding: 1rem;
   margin-bottom: 1rem;
   box-shadow: 0 25px 50px -10px rgb(100 44 0 / 7%);
   position: relative;
+  border: 2px solid var(--secondary);
 }
 .about-us-grid-box .icon i {
   font-size: 2.3rem;
@@ -469,7 +472,7 @@ video {
   margin-top: 1.75rem;
 }
 .contact-info-grid{
-  padding-top: 10rem;
+  padding-top: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;

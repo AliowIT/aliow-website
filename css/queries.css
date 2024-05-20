@@ -164,9 +164,6 @@
 	.section-grid.reverse .section-grid-left{
 		grid-row: 2;
 	}
-	.section-container p {
-		max-width: unset;
-	}
 }
 
 /*******************************/
@@ -226,10 +223,6 @@
 	.header-secondary {
 		font-size: 3rem;
 	}
-	
-	.section-container h1{
-		font-size: 1.8rem;
-	}
 
 
 	/***********************/
@@ -252,6 +245,8 @@
 	/*******************/
 	.contact-info-grid{
 		grid-template-columns: auto;
+		gap: 3rem;
+		padding-top: 3rem;
 	}
 
 	/**********/

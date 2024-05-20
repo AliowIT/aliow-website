@@ -9,15 +9,38 @@ function contactMessageInit() {
     var submitButton = form.querySelector("button");
     submitButton.classList.add("sending");
     
-    setTimeout(function () {
-      submitButton.classList.remove("sending");
-      submitButton.classList.add("thanks");
-    }, 3000);
-    
-    setTimeout(function () {
-      submitButton.classList.remove("thanks");
-    }, 4000);
-  });
+      
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+    fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: json,
+  }).then(async (response) => {
+      let json = await response.json();
+      if (response.status == 200) {
+        submitButton.classList.remove("sending");
+        submitButton.classList.add("thanks");
+      } else {
+        console.log(response);
+        result.innerHTML = json.message;
+        submitButton.classList.add("error");
+      }
+    }).catch((error) => {
+      console.log(error);
+      submitButton.classList.add("error");
+    }).then(function () {
+      form.reset();
+      setTimeout(() => {
+        submitButton.classList.remove("thanks");
+        submitButton.classList.remove("error");
+      }, 5000);
+    });
+});
 }
 
 document.addEventListener("DOMContentLoaded", function () {

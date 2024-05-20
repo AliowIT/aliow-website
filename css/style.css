@@ -617,6 +617,22 @@ video {
   transition: 0s ease;
   width: 100%;
 }
+.contact-info-btn.error {
+  animation: animThanks 0.5s ease 0s 1;
+  border-color: var(--secondary);
+  color: transparent;
+  pointer-events: none;
+}
+.contact-info-btn.error:before {
+  color: var(--white);
+  content: "Something went wrong..";
+  font-size: 1.25rem;
+  font-weight: lightest;
+  padding: 0.5rem;
+  text-align: center;
+  transition: 0s ease;
+  width: 100%;
+}
 .contact-info-btn .fa {
   margin-right: 0.25rem;
 }
@@ -628,26 +644,29 @@ video {
 /*******************************/
 footer {
   background-color: var(--primary);
-  color: var(--white);
-  font-size: 1rem;
+  font-size: 0.8em;
+  color: rgb(184 179 179);
   text-align: center;
   padding: 1.2rem;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2rem;
   align-items: center;
 }
 .footer-location{
-  justify-self: start;
-  display: flex;
   gap: 7px;
   text-align: left;
 }
 .footer-location i{
   padding-top: 5px;
 }
+.footer-location-label{
+  color: var(--white);
+  font-size: 1em;
+  padding-bottom: 3px;
+}
 .footer-socials{
-  justify-self: end;
 }
 footer .footer-socials ul {
   display: flex;

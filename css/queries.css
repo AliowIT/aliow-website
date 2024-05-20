@@ -258,8 +258,8 @@
 	/* FOOTER */
 	/**********/
 	footer {
-		flex-direction: column;
-		gap: 2.4rem;
+		grid-template-columns: auto;
+		justify-items: center;
 	}
 }
 

@@ -194,7 +194,9 @@ form label{
   align-items: center;
   gap: 3.8rem;
 }
-
+.main-nav-list li{
+  position: relative;
+}
 .main-nav-link:link,
 .main-nav-link:visited {
   display: inline-block;
@@ -211,7 +213,7 @@ form label{
   background-position: -100%;
   transition: all 0.3s ease-in-out;
 }
-.main-nav-link::before {
+.main-nav-link:before {
   display: block;
   content: "";
   width: 0;
@@ -221,15 +223,15 @@ form label{
   bottom: -3px;
   z-index: 0;
   position: absolute;
-  background: #23abd4;
+  background: var(--secondary);
   transition: all 0.3s ease-in-out;
 }
-/*
-.main-nav-link:active,
 .main-nav-link:hover {
-  color: var(--secondary);
+  background-position: 0%;
 }
-
+.main-nav-link:hover:before {
+  width: 100%;
+}
 .main-nav-link.nav-cta:link,
 .main-nav-link.nav-cta:visited {
   display: inline-block;
@@ -237,13 +239,18 @@ form label{
   border-radius: 8px;
   color: var(--primary);
   background-color: var(--secondary);
+  background-image: unset;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
 }
-
+.main-nav-link.nav-cta:before{
+  background: none;
+}
 .main-nav-link.nav-cta:hover,
 .main-nav-link.nav-cta:active {
   background-color: var(--secondary);
 }
-*/
+
 /******************/
 /*     MOBILE     */
 /******************/
@@ -491,6 +498,7 @@ video {
   font-size: 1.2rem;
 }
 .values-list .values-list-item .value-description{
+  letter-spacing: 1px;
 }
 /*******************************/
 /*      SECTION CONTACT        */
@@ -530,6 +538,91 @@ video {
   color: var(--secondary);
 }
 
+.contact-info-btn{
+  border: 1px solid var(--secondary);
+  border-radius: 0.5rem;
+  background-color: var(--secondary);
+  color: var(--primary);
+  cursor: pointer;
+  display: block;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  outline: none;
+  padding: 0.5rem 1rem;
+  animation: showUp, slideDown 1.2s;
+}
+.contact-info-btn {
+  overflow: hidden;
+  position: relative;
+  transition: 0.5s ease;
+}
+.contact-info-btn::-moz-focus-inner {
+  border: 0;
+}
+.contact-info-btn:before {
+  background-color: var(--secondary);
+  content: "";
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: 0s ease;
+  width: 0;
+}
+.contact-info-btn:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.25s ease;
+}
+.contact-info-btn.sending {
+  background-color: var(--white);
+  border-color: var(--secondary);
+  color: transparent;
+  pointer-events: none;
+}
+.contact-info-btn.sending:before {
+  transition: 2.5s ease;
+  width: 100%;
+}
+.contact-info-btn.sending .fa {
+  color: var(--secondary);
+  animation: animFly 1s linear 0s 1 forwards;
+  position: relative;
+}
+.contact-info-btn.sending .fa:after {
+  border-top: 0.25rem dotted rgba(255, 255, 255, 0.5);
+  display: block;
+  height: 0;
+  left: -2.5rem;
+  opacity: 1;
+  position: absolute;
+  top: 0.66rem;
+  transition: opacity 0.5s ease;
+  width: 2.45rem;
+}
+.contact-info-btn.thanks {
+  animation: animThanks 0.5s ease 0s 1;
+  border-color: var(--secondary);
+  color: transparent;
+  pointer-events: none;
+}
+.contact-info-btn.thanks:before {
+  color: var(--white);
+  content: "Thank you!";
+  font-size: 1.25rem;
+  font-weight: lightest;
+  padding: 0.5rem;
+  text-align: center;
+  transition: 0s ease;
+  width: 100%;
+}
+.contact-info-btn .fa {
+  margin-right: 0.25rem;
+}
+.contact-info-btn .fa:after {
+  opacity: 0;
+}
 /*******************************/
 /*           FOOTER            */
 /*******************************/
@@ -636,5 +729,27 @@ footer .footer-socials ul li:nth-child(3) a:before {
 @media (prefers-reduced-motion) {
   .hidden {
     transition: none;
+  }
+}
+@keyframes animThanks {
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes animFly {
+  5% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: translate(6rem, 0);
+  }
+  100% {
+    transform: translate(12rem, -2rem);
   }
 }

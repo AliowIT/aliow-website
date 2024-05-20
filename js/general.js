@@ -1,5 +1,29 @@
 "use strict";
 
+function contactMessageInit() {
+  var form = document.querySelector(".contact-form");
+
+  form.addEventListener("submit", function (eSubmit) {
+    eSubmit.preventDefault();
+
+    var submitButton = form.querySelector("button");
+    submitButton.classList.add("sending");
+    
+    setTimeout(function () {
+      submitButton.classList.remove("sending");
+      submitButton.classList.add("thanks");
+    }, 3000);
+    
+    setTimeout(function () {
+      submitButton.classList.remove("thanks");
+    }, 4000);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  contactMessageInit();
+});
+
 // Set current year in foote copyright
 const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();

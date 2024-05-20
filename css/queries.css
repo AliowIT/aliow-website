@@ -62,7 +62,12 @@
 		/* 3) Hide it from screen readers */
 		visibility: hidden;
 	}
-
+	.main-nav-link:link, .main-nav-link:visited{
+		-webkit-text-fill-color: unset;
+		background-image: unset;
+		background-size: unset;
+		background-position: unset;
+	}
 	.nav-open .main-nav {
 		opacity: 1;
 		pointer-events: auto;

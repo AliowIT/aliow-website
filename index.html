@@ -73,18 +73,18 @@
     <!-- ************************** -->
     <section class="section-about-us" id="about-us">
       <div class="section-container"> 
-        <h1 class="text-center">
+        <h1 class="text-center hidden">
           We bring everything to build
           <span class="text-highlight">exceptional</span> application solutions
         </h1>
-        <p class="text-center">We believe that people with passion, resilience and integrity have a positive impact in the world</p>
+        <p class="text-center hidden">We believe that people with passion, resilience and integrity have a positive impact in the world</p>
       </div>
     </section>
     <!-- ************************** -->
     <!--      What we do SECTION      -->
     <!-- ************************** -->
     <section id="capabilities">
-      <div class="section-container section-background"> 
+      <div class="section-container section-background hidden"> 
         <h1 class="text-center">
           How can we step-up
         </h1>
@@ -125,7 +125,7 @@
     <!--     Why Us SECTION      -->
     <!-- ************************ -->
     <section class="section-about-us" id="why-us">
-      <div class="section-container"> 
+      <div class="section-container hidden"> 
         <div class="section-grid">
           <div class="section-grid-left">
             <h1>
@@ -139,7 +139,7 @@
           </div>
           <div class="section-grid-right">
             <ul class="values-list">
-              <li class="values-list-item">
+              <li class="values-list-item hidden">
                 <div class="values-list-item-icon">
                   <i class="fas fa-handshake-angle"></i>
                 </div>
@@ -148,7 +148,7 @@
                   <p class="value-description">We see ourselves as your partners. Our commitment goes beyond delivering a project, we build lasting relationships based on trust, collaboration, and mutual success.</p>
                 </div>
               </li>
-              <li class="values-list-item">
+              <li class="values-list-item hidden">
                 <div class="values-list-item-icon">
                   <i class="fas fa-lightbulb"></i>
                 </div>
@@ -157,7 +157,7 @@
                   <p class="value-description">We start with your problem, not a preselected solution. Our platform-agnostic approach ensures we choose the best low-code technology tailored specifically to meet your unique need.</p>
                 </div>
               </li>
-              <li class="values-list-item">
+              <li class="values-list-item hidden">
                 <div class="values-list-item-icon">
                   <i class="fas fa-users"></i>
                 </div>
@@ -175,10 +175,11 @@
     <!--     CONTACT SECTION      -->
     <!-- ************************ -->
     <section class="section-contact" id="contact">
-      <div class="section-container section-background"> 
+      <div class="section-container section-background hidden"> 
         <div class="section-grid reverse">
           <div class="section-grid-left align-content-center">
-            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+           <!-- <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">-->
+            <form class="contact-form" method="POST">
               <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
               <input type="hidden" name="subject" value="Contact Form Request" />
               <input type="hidden" name="from_name" value="Aliow" />
@@ -196,7 +197,8 @@
                   <textarea class="form-textarea" id="message" name="message" rows="6" placeholder="Your message" required></textarea>
                 </div>
               </div>
-              <button class="form-submit link-as-btn btn-yellow btn-medium" type="submit">Send Message</button>
+              <button class="form-submit contact-info-btn" type="submit">
+                <i class="fa fa-paper-plane"></i>Send Message</button>
             </form>
           </div>
           <div class="section-grid-right">
@@ -220,10 +222,10 @@
       </div>
     </section>
     <footer>
-      <div class="footer-location">
+      <div class="footer-location hidden">
         <i class="fa-solid fa-location-dot"></i>
-        <div>        <p> Rua Diogo de Marques 8B</p>
-          <p> 1400-107 Lisboa</p></div>
+        <div>        <p> Rua Diogo de Marques 8B, 1400-107 Lisboa</p>
+        </div>
       </div>
       <div>     
         <p>

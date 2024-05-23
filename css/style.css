@@ -75,7 +75,7 @@ form label{
 }
 .link-as-btn{
     display: inline-block;
-    margin-top: 1.8rem;
+    margin-top: 3rem;
     padding: 1rem 1.4rem;
     font-size: 1.8rem;
     border-radius: 8px;
@@ -319,9 +319,9 @@ form label{
 }
 
 .hero-text h1 {
-  margin-top: 17rem;
+  margin-top: 14rem;
   color: #f8f9fa;
-  font-size: 4.2rem;
+  font-size: 4rem;
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
   animation: slideDown 1.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
@@ -397,8 +397,8 @@ video {
 }
 
 .section-container p{
-    font-size: 1rem;
-    max-width: 500px;
+    font-size: 1.2rem;
+    max-width: 800px;
     letter-spacing: 2px;
 }
 .section-grid{
@@ -416,13 +416,9 @@ video {
 }
 
 /*******************************/
-/*      SECTION ABOUT US       */
+/*  SECTION HOW CAN WE HELP    */
 /*******************************/
-.section-about {
-  padding: 9.6rem 0;
-  background-image: url(../img/section-about-us-bg.svg);
-  background-size: cover;
-}
+
 .about-us-grid{
   padding-top: 4rem;
   display: grid;
@@ -501,6 +497,57 @@ video {
   letter-spacing: 1px;
 }
 /*******************************/
+/*      ABOUT US               */
+/*******************************/
+.meet-the-team-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7rem;
+}
+.meet-the-team-grid-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.meet-the-team-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.meet-the-team-image img{
+  width: 15rem;
+  width: auto;
+  height: 20rem;
+  object-fit: contain;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: transform 0.8s, filter 0.8s;
+  transform-style: preserve-3d;
+}
+.meet-the-team-image img:hover{
+  transform: rotateY(180deg);
+  filter: grayscale(100%) brightness(30%);
+
+}
+.meet-the-team-name {
+  font-size: 1.6rem;
+  margin: 5px 0px 10px 0px;
+  text-wrap: nowrap;
+  font-weight: 600;
+}
+.meet-the-team-function{
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+
+/*******************************/
 /*      SECTION CONTACT        */
 /*******************************/
 .section-contact .container:nth-child(2) {
@@ -535,7 +582,7 @@ video {
 }
 .contact-info-grid-item i{
   font-size: 2.5rem;
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .contact-info-btn{

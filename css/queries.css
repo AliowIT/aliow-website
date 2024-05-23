@@ -98,7 +98,7 @@
 	/*  HERO SECTION  */
 	/******************/
 	.hero-text h1 {
-		font-size: 5.2rem;
+		font-size: 3rem;
 	}
 
 	/*******************/
@@ -123,7 +123,7 @@
 	/* HERO SECTION  */
 	/*****************/
 	.hero-text h1 {
-		font-size: 4.4rem;
+		font-size: 3rem;
 	}
 
 	/*****************/
@@ -166,8 +166,8 @@
 		text-align: center;
 		gap: 30px;
 	}
-	.section-grid.reverse .section-grid-left{
-		grid-row: 2;
+	.section-grid.reverse .section-grid-top{
+		grid-row: 1;
 	}
 }
 
@@ -187,22 +187,10 @@
 	.hero-text h1 {
 		margin-top: 10rem;
 	}
-
-	/*****************/
-	/* OFFER SECTION */
-	/*****************/
-	.section-offer .container--big {
-		grid-template-columns: 1fr;
-		padding: 0 12.4rem;
-	}
-
-	/* realizacje.html */
-	.header-realizations-desc {
-		font-size: 2rem;
-	}
-
-	.container--big .realization-img {
-		width: 100%;
+	.meet-the-team-grid{
+		grid-template-columns: auto;
+		gap: 3rem;
+		margin-top: 20px;
 	}
 }
 
@@ -214,7 +202,7 @@
 	/* HERO SECTION  */
 	/*****************/
 	.hero-text h1 {
-		font-size: 3.6rem;
+		font-size: 2.5rem;
 	}
 
 	.hero-text a:link,

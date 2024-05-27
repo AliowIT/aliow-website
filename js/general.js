@@ -54,11 +54,14 @@ yearEl.textContent = currentYear;
 
 // NAV Bar
 const headerEl = document.querySelector("header");
+const scrollBtnEl = document.querySelector(".scroll-down-arrow");
 window.addEventListener('scroll', function(event) {
   if (window.scrollY > 0) {
     headerEl.classList.add('header-scroll');
+    scrollBtnEl.classList.add('hide-slow');
   } else {
     headerEl.classList.remove('header-scroll');
+    scrollBtnEl.classList.remove('hide-slow');
   }
 });
 

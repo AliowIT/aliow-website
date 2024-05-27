@@ -2,7 +2,9 @@
 /* BELOW 1100PX (Laptops) */
 /**************************/
 @media (max-width: 72em) {
-	
+	.core-value-grid-container{
+		grid-template-columns: 1fr 1fr;
+	}
 	/******************/
 	/*  REUSABLE      */
 	/******************/
@@ -12,7 +14,41 @@
 	.section-container h1{
 		font-size: 2.5rem;
 	}
+	/******************/
+	/*  HERO SECTION  */
+	/******************/
+	.hero-text h1 {
+		font-size: 3rem;
+	}
+	/******************/
+	/*  Who we are SECTION  */
+	/******************/
+	.meet-the-team-image {
+		width: 10rem;
+		height: 10rem;
+	}
+	.meet-the-team-image img{
+		height: 10rem;
+	}
+	/*******************/
+	/* CONTACT SECTION */
+	/*******************/
+	.section-contact .container {
+		grid-template-columns: 1fr;
+		max-width: 70rem;
+	}
 
+	.contact-img {
+		grid-row: 1;
+		width: 100%;
+	}
+}
+
+/*******************************/
+/*     BELOW 944px (Tablets)   */
+/*******************************/
+@media (max-width: 59em) {
+	
 	/******************/
 	/*    NAVIGATION  */
 	/******************/
@@ -93,34 +129,7 @@
 		font-size: 1.6rem;
 		color: var(--dark);
 	}
-	.core-value-grid-container{
-		grid-template-columns: 1fr 1fr;
-	}
-	/******************/
-	/*  HERO SECTION  */
-	/******************/
-	.hero-text h1 {
-		font-size: 3rem;
-	}
-
-	/*******************/
-	/* CONTACT SECTION */
-	/*******************/
-	.section-contact .container {
-		grid-template-columns: 1fr;
-		max-width: 70rem;
-	}
-
-	.contact-img {
-		grid-row: 1;
-		width: 100%;
-	}
-}
-
-/*******************************/
-/*     BELOW 944px (Tablets)   */
-/*******************************/
-@media (max-width: 59em) {
+	
 	/*****************/
 	/* HERO SECTION  */
 	/*****************/

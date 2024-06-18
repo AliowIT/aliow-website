@@ -52,6 +52,9 @@
 /*******************************/
 @media (max-width: 59em) {
 	
+	footer{
+		padding: 24px;
+	}
 	/******************/
 	/*    NAVIGATION  */
 	/******************/
@@ -193,6 +196,9 @@
 	.mission-bg{
 		height: 500px;
 	}
+	footer{
+		padding: 12px;
+	}
 }
 
 /*******************************/
@@ -224,6 +230,9 @@
 	}
 	.core-value-grid-container{
 		grid-template-columns: auto;
+	}
+	footer{
+		font-size: 0.9rem;
 	}
 }
 
@@ -276,6 +285,7 @@
     	max-width: 300px;
     	left: 31%;
 	}
+
 }
 
 /*************************************/

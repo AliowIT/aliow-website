@@ -870,7 +870,7 @@ footer .logo-container .logo{
   font-size: 1em;
 }
 .footer-socials{
-  align-items: flex-start;
+  align-items: flex-end;
   display: flex;
   flex-direction: column;
   gap: 1.8rem;

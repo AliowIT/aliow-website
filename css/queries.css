@@ -42,6 +42,9 @@
 		grid-row: 1;
 		width: 100%;
 	}
+	.blue-section-text{
+		font-size: 1.2rem;
+	}
 }
 
 /*******************************/
@@ -49,12 +52,12 @@
 /*******************************/
 @media (max-width: 59em) {
 	
+	footer{
+		padding: 24px;
+	}
 	/******************/
 	/*    NAVIGATION  */
 	/******************/
-	.header {
-		height: 6rem;
-	}
 
 	.hamburger {
 		position: relative;
@@ -172,7 +175,7 @@
 /*     BELOW 900px (Tablets)   */
 /*******************************/
 @media (max-width: 60em) {
-	.section-grid{
+	.section-grid, .section-grid.contact{
 		grid-template-columns: auto;
 		text-align: center;
 		gap: 40px;
@@ -182,6 +185,19 @@
 	}
 	.section-container p {
 		font-size: 0.9rem;
+	}
+	.contact-info-grid{
+		flex-direction: row;
+    	justify-content: space-between;
+	}
+	.mission-text{
+		font-size: 1.5rem;
+	}
+	.mission-bg{
+		height: 500px;
+	}
+	footer{
+		padding: 12px;
 	}
 }
 
@@ -199,14 +215,13 @@
 	}
 	.hero-text{
 		margin-left: 0;
-		text-align: center;
-		justify-content: center;
 	}
 	.hero-text h1 {
 		font-size: 2.3rem;
 	}
 	.link-as-btn{
 		font-size: 1rem;
+		padding: 0.5rem 1rem;
 	}
 	.meet-the-team-grid{
 		grid-template-columns: auto;
@@ -215,6 +230,9 @@
 	}
 	.core-value-grid-container{
 		grid-template-columns: auto;
+	}
+	footer{
+		font-size: 0.9rem;
 	}
 }
 
@@ -234,15 +252,6 @@
 	/***********************/
 	.header-secondary {
 		font-size: 3rem;
-	}
-
-
-	/***********************/
-	/*   VIDEO SECTION     */
-	/***********************/
-	.yt-video {
-		width: 44rem;
-		height: 30rem;
 	}
 
 	/***********************/
@@ -268,6 +277,15 @@
 		grid-template-columns: auto;
 		justify-items: center;
 	}
+	.mission-bg{
+		height: 350px;
+	}
+	.mission-text{
+		font-size: 1.2rem;
+    	max-width: 300px;
+    	left: 31%;
+	}
+
 }
 
 /*************************************/
@@ -288,7 +306,7 @@
 		background-position-x: 10%;
 	}
 	.hero-text h1 {
-		font-size: 1.5rem;
+		font-size: 1.6rem;
 	}
 	/***********************/
 	/*  SECTION ABOUT US   */
@@ -317,12 +335,11 @@
 /*     BELOW 450px (Smartphones)   */
 /***********************************/
 @media (max-width: 28.125em) {
-	/***********************/
-	/*   VIDEO SECTION     */
-	/***********************/
-	.yt-video {
-		width: 40rem;
-		height: 30rem;
+	.header {
+		padding: 12px 24px 0px 24px;
+	}
+	.section-container p {
+		font-size: 0.7rem;
 	}
 }
 

@@ -565,7 +565,7 @@ video {
 /*******************************/
 .meet-the-team-grid{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 7rem;
   padding-top: 4rem;
 }

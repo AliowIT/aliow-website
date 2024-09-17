@@ -421,6 +421,7 @@ video {
     padding: 7rem 1.875rem 6rem 1.875rem;
     --background-color: var(--primary-background-color);
     background-color: var(--white);
+    overflow: hidden;
 }
 .section-container.small-padding{
   padding: 3rem;
@@ -839,11 +840,12 @@ footer {
   background-color: var(--primary);
   color: var(--white);
   text-align: center;
-  padding: 6rem;
+  /*padding: 6rem;*/
+  padding: 2.75rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 200px;
+  /*height: 200px;*/
 }
 footer .logo-container{
     align-items: flex-start;

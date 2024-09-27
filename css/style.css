@@ -50,6 +50,7 @@ input, textarea{
   border: none;
   width: 100%;
   font-family: "Roboto";
+  resize: vertical;
 }
 form label{
   font-size: 14px;

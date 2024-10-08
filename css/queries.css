@@ -1,0 +1,410 @@
+/**************************/
+/* BELOW 1100PX (Laptops) */
+/**************************/
+@media (max-width: 72em) {
+	.core-value-grid-container{
+		grid-template-columns: 1fr 1fr;
+	}
+	/******************/
+	/*  REUSABLE      */
+	/******************/
+	.section-container{
+		padding: 6rem 1.875rem;
+	}
+	.section-container h1{
+		font-size: 2.5rem;
+	}
+	/******************/
+	/*  HERO SECTION  */
+	/******************/
+	.hero-text h1 {
+		font-size: 3rem;
+	}
+	/******************/
+	/*  Who we are SECTION  */
+	/******************/
+	.meet-the-team-image {
+		width: 10rem;
+		height: 10rem;
+	}
+	.meet-the-team-image img{
+		height: 10rem;
+	}
+	/*******************/
+	/* CONTACT SECTION */
+	/*******************/
+	.section-contact .container {
+		grid-template-columns: 1fr;
+		max-width: 70rem;
+	}
+
+	.contact-img {
+		grid-row: 1;
+		width: 100%;
+	}
+	.blue-section-text{
+		font-size: 1.2rem;
+	}
+}
+
+/*******************************/
+/*     BELOW 944px (Tablets)   */
+/*******************************/
+@media (max-width: 59em) {
+	
+	footer{
+		padding: 24px;
+	}
+	/******************/
+	/*    NAVIGATION  */
+	/******************/
+
+	.hamburger {
+		position: relative;
+		z-index: 99;
+		display: flex;
+		width: 2rem;
+		height: 2rem;
+		align-items: center;
+		justify-items: center;
+		cursor: pointer;
+	  }
+
+	.main-nav {
+		background-color: rgba(255, 255, 255, 0.9);
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(5px);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		transform: translateX(100%);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		/* animation from this site --> https://easings.net/#easeInOutQuint */
+		transition: all 0.5s cubic-bezier(0.83, 0, 0.17, 1);
+
+		/* Hide navigation */
+		/* Allows NO transitions at all! */
+		/* display: none; */
+
+		/* 1) Hide it visually */
+		opacity: 0;
+
+		/* 2) Make it unaccessible to mouse and keyboard */
+		pointer-events: none;
+
+		/* 3) Hide it from screen readers */
+		visibility: hidden;
+	}
+	.main-nav-link:link, .main-nav-link:visited{
+		-webkit-text-fill-color: unset;
+		background-image: unset;
+		background-size: unset;
+		background-position: unset;
+	}
+	.nav-open .main-nav {
+		opacity: 1;
+		pointer-events: auto;
+		visibility: visible;
+		transform: translateX(0%);
+	}
+	.nav-open .icon-mobile-nav[name="menu-outline"] {
+		display: none;
+	}
+
+	.nav-open .icon-mobile-nav[name="close-outline"] {
+		display: block;
+	}
+
+	.main-nav-list {
+		flex-direction: column;
+		justify-content: center;
+		gap: 4.8rem;
+	}
+
+	.main-nav-link:link,
+	.main-nav-link:visited {
+		font-size: 1.6rem;
+		color: var(--dark);
+	}
+	
+	/*****************/
+	/* HERO SECTION  */
+	/*****************/
+	.hero-text h1 {
+		font-size: 2.6rem;
+	}
+
+	/*****************/
+	/*    REUSABLE   */
+	/*****************/
+	.header-secondary {
+		font-size: 3.6rem;
+	}
+
+	/***********************/
+	/*  SECTION ABOUT US   */
+	/***********************/
+	.about-us-grid{
+		grid-template-columns: 1fr 1fr;
+	}
+
+	/* centering title of the section */
+	.container--big .hidden {
+		text-align: center;
+	}
+
+	.about-container--reverse .about-text {
+		grid-row: 2;
+	}
+
+	/*****************/
+	/* OFFER SECTION */
+	/*****************/
+	.section-offer .container--big {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/*******************************/
+/*     BELOW 900px (Tablets)   */
+/*******************************/
+@media (max-width: 60em) {
+	.section-grid, .section-grid.contact{
+		grid-template-columns: auto;
+		text-align: center;
+		gap: 40px;
+	}
+	.section-grid.reverse .section-grid-top{
+		grid-row: 1;
+	}
+	.section-container p {
+		font-size: 0.9rem;
+	}
+	.contact-info-grid{
+		flex-direction: row;
+    	justify-content: space-between;
+	}
+	.mission-text{
+		font-size: 1.5rem;
+	}
+	.mission-bg{
+		height: 500px;
+	}
+	footer{
+		/*padding: 12px;*/
+	}
+}
+
+/*******************************/
+/*     BELOW 800px (Tablets)   */
+/*******************************/
+@media (max-width: 50em) {
+	/*****************/
+	/* HERO SECTION  */
+	/*****************/
+	.section-hero {
+		display: flex;
+		justify-content: center;
+    	align-items: center;
+	}
+	.hero-text{
+		margin-left: 0;
+	}
+	.hero-text h1 {
+		font-size: 2.3rem;
+	}
+	.link-as-btn{
+		font-size: 1rem;
+		padding: 0.5rem 1rem;
+	}
+	.meet-the-team-grid{
+		grid-template-columns: auto;
+		gap: 3rem;
+		margin-top: 20px;
+	}
+	.core-value-grid-container{
+		grid-template-columns: auto;
+	}
+	footer{
+		font-size: 0.9rem;
+	}
+}
+
+/*************************************/
+/*     BELOW 600px (Small Tablets)   */
+/*************************************/
+@media (max-width: 37.5em) {
+	/*****************/
+	/* HERO SECTION  */
+	/*****************/
+	.hero-text h1 {
+		font-size: 2rem;
+	}
+
+	/***********************/
+	/*       REUSABLE      */
+	/***********************/
+	.header-secondary {
+		font-size: 3rem;
+	}
+
+	/***********************/
+	/*  SECTION ABOUT US   */
+	/***********************/
+	.about-us-grid{
+		grid-template-columns: auto;
+	}
+
+	/*******************/
+	/* CONTACT SECTION */
+	/*******************/
+	.contact-info-grid{
+		grid-template-columns: auto;
+		gap: 3rem;
+		padding-top: 3rem;
+	}
+
+	/**********/
+	/* FOOTER */
+	/**********/
+	footer {
+		grid-template-columns: auto;
+		justify-items: center;
+	}
+	.mission-bg{
+		height: 350px;
+	}
+	.mission-text{
+		font-size: 1.2rem;
+    	max-width: 300px;
+    	left: 31%;
+	}
+
+}
+
+/*************************************/
+/*   BELOW 510px (Big Smartphones)   */
+/*************************************/
+@media (max-width: 34em) {
+	/***********************/
+	/*  SECTION ABOUT US   */
+	/***********************/
+	.about-img {
+		width: 100%;
+	}
+
+	/***********************/
+	/*    HERO SECTION     */
+	/***********************/
+	.section-hero {
+		background-position-x: 10%;
+	}
+	.hero-text h1 {
+		font-size: 1.6rem;
+	}
+	/***********************/
+	/*  SECTION ABOUT US   */
+	/***********************/
+	.section-about .container--big {
+		padding: 0 2.4rem;
+	}
+
+	.about-img {
+		width: 100%;
+	}
+
+	/*****************/
+	/* OFFER SECTION */
+	/*****************/
+	.section-offer .container--big {
+		padding: 0 4.8rem;
+	}
+
+	.section-offer {
+		padding: 0;
+	}
+}
+
+/***********************************/
+/*     BELOW 450px (Smartphones)   */
+/***********************************/
+@media (max-width: 28.125em) {
+	.header {
+		padding: 12px 24px 0px 24px;
+	}
+	.section-container p {
+		font-size: 0.7rem;
+	}
+}
+
+/***********************************/
+/*     BELOW 400px (Smartphones)   */
+/***********************************/
+@media (max-width: 25em) {
+
+	/***********************/
+	/*   VIDEO SECTION     */
+	/***********************/
+	.yt-video {
+		width: 30rem;
+		height: 20rem;
+	}
+
+	/***********************/
+	/*  SECTION ABOUT US   */
+	/***********************/
+	.section-about .container--big {
+		padding: 0 2.4rem;
+	}
+
+	.about-container {
+		padding: 0;
+	}
+
+	.about-img {
+		width: 100%;
+	}
+
+	/*****************/
+	/* OFFER SECTION */
+	/*****************/
+	.section-offer .container--big {
+		padding: 0 2.4rem;
+	}
+
+	.section-offer {
+		padding: 0;
+	}
+
+	/*******************/
+	/* CONTACT SECTION */
+	/*******************/
+	.section-contact .container:nth-child(2) {
+		padding: 3.2rem;
+	}
+
+	/* realizacje.html */
+	.section-realizations .container--big {
+		padding: 0 1.2rem;
+	}
+
+	/*******************/
+	/*     FOOTER      */
+	/*******************/
+	footer {
+		flex-direction: column;
+	}
+	footer .logo-container {
+		align-items: center;
+	}
+	footer .footer-socials {
+		align-items: center;
+	}
+
+}

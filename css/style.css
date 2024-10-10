@@ -735,6 +735,12 @@ p.core-values-header{
 .contact-info-grid-item p {
   letter-spacing: normal;
 }
+.contact-info-grid-item a {
+  letter-spacing: normal;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: inherit;
+}
 .contact-info-btn{
   padding: 0.5rem 1.2rem;
   border-radius: 32px;

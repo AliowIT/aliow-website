@@ -183,7 +183,7 @@
 	.section-grid.reverse .section-grid-top{
 		grid-row: 1;
 	}
-	.section-container p {
+	.section-container p, .section-container a {
 		font-size: 0.9rem;
 	}
 	.contact-info-grid{
@@ -338,9 +338,10 @@
 	.header {
 		padding: 12px 24px 0px 24px;
 	}
-	.section-container p {
+	.section-container p, .section-container a {
 		font-size: 0.7rem;
 	}
+	
 }
 
 /***********************************/
